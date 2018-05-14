@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<backends default="mysql0">
+		<backend id="mysql0" type="sql">
+			<uri>
+				<adapter>pdo_mysql</adapter>
+				<host>
+					localhost
+				</host>
+				<username>
+					<dev>root</dev>
+					<stage></stage>
+					<prod></prod>
+				</username>
+				<password>
+					<dev>root</dev>
+					<stage></stage>
+					<prod></prod>
+				</password>
+				<port>3306</port>
+				<url>
+					<dev>scotchbox</dev>
+					<stage></stage>
+					<prod></prod>
+				</url>
+			</uri>
+		</backend>
+	</backends>
+</config>

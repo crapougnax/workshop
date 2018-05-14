@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<acl>
+		<method>whitelist</method>
+		<roles>
+			<role id="admin" type="role">
+				<label>Administrateur</label>
+			</role>
+			<role id="user" type="role">
+				<label>Utilisateur</label>
+			</role>
+			<role id="guest" type="role">
+				<label>Invité</label>
+			</role>
+			<role id="members" type="group">
+				<members>
+					<user/>
+					<guest/>
+				</members>
+			</role>
+		</roles>
+	</acl>
+</config>

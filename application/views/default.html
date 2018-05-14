@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+<head>
+  <meta charset="utf-8">
+	<title>%env:page.title%</title>
+	%components:css%
+  <style type="text/css">
+    #main { max-width: 1200px;min-width: 960px;margin: 0 auto 0;background-color:white;padding:5px;min-height:600px;}
+    #header { max-height: 100px; }
+	#logo { width:185px;float:left;font-size:48px; }
+    #header>* { }
+    #content { min-width: 650px;max-width: 1400px; }
+    #content>div { float: left; }
+    #left, #right { width: 185px;max-width: 200px; }
+    #default { min-width: 650px;max-width: 1000px; }
+    #bottom { min-width: 800px;max-height: 60px; }
+    #footer { clear: both; max-height: 60px; }
+    #absfooter { clear: both; max-width: 1200px;margin: 0 auto 30px;padding:5px;max-height: 60px;background-color:#ddd; }
+/* -- BEGIN CONNECTION INFORMATION -- */
+#absheader{
+    background-color: #DDDDDD;
+    clear: both;
+    margin: 15px auto 0;
+    max-height: 60px;
+    max-width: 1200px;
+    padding: 5px 5px 25px 5px;
+}
+#absheader span.version {
+    float:left;
+}
+#absheader span.connection{
+    float:right;
+}
+/* -- END CONNECTION INFORMATION -- */
+  </style>
+  %env:analytics%
+</head>
+<body class="t41 white medium" style="background-color:#DDDDCC">
+    <div id="absheader"><span class="version">
+  	%container:absfooter%</span><span class="connection">%env:operateur.prenom% %env:operateur.nom% | %env:classe.nom% (%env:role% / %env:entite.nom%) | %env:logout%</span></div>
+      <div class="clear"></div>
+  <div id="main">
+    <div id="header">
+      %container:header%
+      <div>
+        <div id="logo"><a href="/">%env:app.name%</a></div>
+        %container:menu%
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="content">
+      <div id="left">
+		%container:left%
+      </div>
+      <div id="default">
+		    %container:default%
+        <div id="bottom">
+          <!-- %POSITION:BOTTOM% -->
+        </div>
+      </div>
+      <div id="right">
+		    %container:right%
+      </div>
+      <div id="footer">
+	     %container:footer%
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="absfooter">
+  %env:app.name% %env:app.version% (t41 %env:t41.version% / zf %env:zf.version%) %env:app.env% - <strong>Exercice %env:annee.courante%</strong>
+  	%container:absfooter%
+  </div>
+    <div class="clear"></div>
+%components:js%
+</body>
+</html>

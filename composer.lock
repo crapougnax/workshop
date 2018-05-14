@@ -1,0 +1,228 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "547d278b8e6ee7efe5ee6d3bc1a19e91",
+    "packages": [
+        {
+            "name": "crapougnax/t41",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crapougnax/t41.git",
+                "reference": "76174060967bf97704db9d4bb4df65c4bd5b99e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crapougnax/t41/zipball/76174060967bf97704db9d4bb4df65c4bd5b99e9",
+                "reference": "76174060967bf97704db9d4bb4df65c4bd5b99e9",
+                "shasum": ""
+            },
+            "require": {
+                "message/wkhtmltopdf": ">=1.0.0",
+                "tecnickcom/tcpdf": "6.2.12",
+                "zendframework/zendframework1": "1.12.20"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "t41": "library"
+                },
+                "psr-4": {
+                    "t41\\": "library/t41"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Olivier Lépine",
+                    "email": "olivier@lepine.fr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "RAD Toolkit",
+            "homepage": "https://github.com/crapougnax/t41",
+            "keywords": [
+                "application",
+                "business",
+                "prototyping",
+                "rad"
+            ],
+            "time": "2018-01-09T10:26:49+00:00"
+        },
+        {
+            "name": "message/wkhtmltopdf",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/messagedigital/wkhtmltopdf.git",
+                "reference": "7bf2bb8b049d4e3e4ba556a230d87b5dd7115368"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/messagedigital/wkhtmltopdf/zipball/7bf2bb8b049d4e3e4ba556a230d87b5dd7115368",
+                "reference": "7bf2bb8b049d4e3e4ba556a230d87b5dd7115368",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/wkhtmltopdf-osx",
+                "bin/wkhtmltopdf-amd64",
+                "bin/wkhtmltopdf-i386",
+                "bin/wkhtmltoimage-osx",
+                "bin/wkhtmltoimage-amd64",
+                "bin/wkhtmltoimage-i386"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL Version 3"
+            ],
+            "authors": [
+                {
+                    "name": "Laurence Roberts",
+                    "email": "laurence@message.co.uk"
+                },
+                {
+                    "name": "Joe Holdcroft",
+                    "email": "joe@message.co.uk"
+                }
+            ],
+            "description": "Convert html to pdf using webkit (qtwebkit). Re-packaged with a stable version, with all available binaries.",
+            "homepage": "https://code.google.com/p/wkhtmltopdf/",
+            "keywords": [
+                "binary",
+                "convert",
+                "image",
+                "pdf",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltoimage",
+                "wkhtmltopdf"
+            ],
+            "time": "2013-11-17T14:22:37+00:00"
+        },
+        {
+            "name": "tecnickcom/tcpdf",
+            "version": "6.2.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tecnickcom/TCPDF.git",
+                "reference": "2f732eaa91b5665274689b1d40b285a7bacdc37f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/2f732eaa91b5665274689b1d40b285a7bacdc37f",
+                "reference": "2f732eaa91b5665274689b1d40b285a7bacdc37f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "fonts",
+                    "config",
+                    "include",
+                    "tcpdf.php",
+                    "tcpdf_parser.php",
+                    "tcpdf_import.php",
+                    "tcpdf_barcodes_1d.php",
+                    "tcpdf_barcodes_2d.php",
+                    "include/tcpdf_colors.php",
+                    "include/tcpdf_filters.php",
+                    "include/tcpdf_font_data.php",
+                    "include/tcpdf_fonts.php",
+                    "include/tcpdf_images.php",
+                    "include/tcpdf_static.php",
+                    "include/barcodes/datamatrix.php",
+                    "include/barcodes/pdf417.php",
+                    "include/barcodes/qrcode.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "Nicola Asuni",
+                    "email": "info@tecnick.com",
+                    "homepage": "http://nicolaasuni.tecnick.com"
+                }
+            ],
+            "description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
+            "homepage": "http://www.tcpdf.org/",
+            "keywords": [
+                "PDFD32000-2008",
+                "TCPDF",
+                "barcodes",
+                "datamatrix",
+                "pdf",
+                "pdf417",
+                "qrcode"
+            ],
+            "time": "2015-09-12T10:08:34+00:00"
+        },
+        {
+            "name": "zendframework/zendframework1",
+            "version": "1.12.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zf1.git",
+                "reference": "737ef159654fbbef37cf9af742b2c8f9690c2ece"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zf1/zipball/737ef159654fbbef37cf9af742b2c8f9690c2ece",
+                "reference": "737ef159654fbbef37cf9af742b2c8f9690c2ece",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.11"
+            },
+            "require-dev": {
+                "phpunit/dbunit": "1.3.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.12.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend_": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "library/"
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 1",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "ZF1",
+                "framework"
+            ],
+            "time": "2016-09-08T14:50:34+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

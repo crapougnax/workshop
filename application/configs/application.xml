@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<application>
+			<name>Workshop</name>
+			<version>
+				<major>1</major>
+				<minor>0</minor>
+				<revision>0</revision>
+			</version>
+			<versions default="fr">
+				<version id="fr">
+					<language>fr</language>
+					<locale>fr_FR</locale>
+					<currency>EUR</currency>
+					<timezone>Europe/Paris</timezone>
+				</version>
+			</versions>
+			<environments default="dev" mode="hostname">
+				<environment id="dev">
+					<hostname>workshop.local</hostname>
+					<lazy>false</lazy>
+					<debug>true</debug>
+					<log>true</log>
+					<cli>true</cli>
+					<cache_backend>File</cache_backend>
+					<cache_configs>true</cache_configs>
+					<cache_objects>true</cache_objects>
+					<cache_datasets>true</cache_datasets>
+					<cache_assets></cache_assets>
+					<php>
+						<error_reporting>E_ALL</error_reporting>
+					</php>
+				</environment>
+				<environment id="stage">
+					<hostname>workshop.staging</hostname>
+					<lazy>false</lazy>
+					<debug>true</debug>
+					<log>all</log>
+					<cli>true</cli>
+					<cache_backend>File</cache_backend>
+					<cache_configs>false</cache_configs>
+					<cache_objects>true</cache_objects>
+					<cache_datasets>true</cache_datasets>
+					<cache_assets>html/cache;cache</cache_assets>
+					<cdn></cdn>
+					<php>
+						<error_reporting>E_ALL</error_reporting>
+					</php>
+					<keys/>
+				</environment>
+				<environment id="prod">
+					<hostname>www.workshop.int</hostname>
+					<lazy>false</lazy>
+					<debug>false</debug>
+					<log>false</log>
+					<cli>true</cli>
+					<cache_backend>File</cache_backend>
+					<cache_configs>true</cache_configs>
+					<cache_objects>true</cache_objects>
+					<cache_datasets>true</cache_datasets>
+					<cache_assets>html/cache;cache</cache_assets>
+					<cdn>d2v6nsckeg6knx.cloudfront.net</cdn>
+					<php>
+						<error_reporting>E_ERROR</error_reporting>
+					</php>
+					<keys/>
+			</environment>
+		</environments>
+	</application>
+</config>
