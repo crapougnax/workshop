@@ -18,22 +18,22 @@ use t41\ObjectModel\ObjectUri;
  */
 
 ini_set('display_errors', true);
-//session_name('t41_page_sessid');
 
 require '../vendor/autoload.php';
 
 /* STEP 1: detect and load core components (t41 + zf) */
-require_once '../vendor/crapougnax/t41/library/t41/Core.php';
 Core::setIncludePaths(substr(dirname(__FILE__), 0, strrpos(dirname(__FILE__), '/')+1), true);
 Core::enableAutoloader([
-	'Zend_' => Core::$basePath . 'vendor/zendframework/zendframework1/library'
+	'Workshop' => Core::$basePath . 'application/library',
 ]);
 
 Core::sendNoCacheHeaders();
+error_reporting(E_ALL);
 
 /* STEP 2: load application configuration and modules */
 Core::init();
 Core::$lang = 'fr';
+
 
 /* STEP 3: route request */
 $fcontroller = \Zend_Controller_Front::getInstance();
@@ -52,6 +52,7 @@ $fcontroller->setControllerDirectory($_routes);
 try {
 	$fcontroller->dispatch();
 } catch (\Exception $e) {
+	var_Dump($e);
 	displayException($e, "Erreur Système");
 }
 

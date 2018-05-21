@@ -1,6 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<objects>
-		<!-- define your own objects here -->
+		<object id="Workshop\Operateur" extends="t41\Core\BaseObject">
+			<properties>
+				<property id="nom" type="string">
+					<label>Nom</label>
+					<constraints>
+						<mandatory />
+					</constraints>
+				</property>
+				<property id="prenom" type="string">
+					<label>Prénom</label>
+					<constraints>
+						<mandatory />
+					</constraints>
+				</property>
+				<property id="email" type="string">
+					<label>Adresse email</label>
+				</property>
+				<property id="telephone" type="string">
+					<label>Téléphone</label>
+				</property>
+				<property id="mobile" type="string">
+					<label>Mobile</label>
+				</property>
+				<property id="identifiant" type="string">
+					<label>Identifiant</label>
+					<constraints>
+						<protected />
+						<mandatory/>
+					</constraints>
+				</property>
+				<property id="motdepasse" type="string">
+					<label>Mot de passe</label>
+					<constraints>
+						<encrypted/>
+						<format>password</format>
+					</constraints>
+				</property>
+			</properties>
+		</object>
+
+		<object id="Workshop\Operateur\Role" extends="t41\Core\BaseObject">
+			<properties>
+				<property id="operateur" type="object">
+					<label>Opérateur</label>
+					<instanceof>Workshop\Operateur</instanceof>
+					<display>nom,prenom</display>
+					<constraints>
+						<mandatory />
+						<protected/>
+					</constraints>
+				</property>
+				<property id="entite" type="object">
+					<label>Entite</label>
+					<instanceof>Workshop\Entite</instanceof>
+					<display>type,label</display>
+					<sorting>label ASC</sorting>
+					<constraints>
+						<mandatory />
+					</constraints>
+				</property>
+				<property id="role" type="enum">
+					<label>Rôle</label>
+					<constraints>
+						<protected />
+						<mandatory/>
+					</constraints>
+					<values>
+						<value id="admin"><label>Administrateur</label></value>
+						<value id="user"><label>Utilisateur</label></value>
+						<value id="guest"><label>Invité</label></value>
+					</values>
+				</property>
+				<property id="debut" type="date">
+					<label>Début</label>
+					<constraints>
+						<protected />
+						<mandatory/>
+					</constraints>
+				</property>
+				<property id="fin" type="date">
+					<label>Fin</label>
+				</property>
+			</properties>
+		</object>
 	</objects>
 </config>

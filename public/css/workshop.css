@@ -1,0 +1,544 @@
+/* * * * * * * * * * * *
+	GENERALITES
+* * * * * * * * * * * */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+html {
+	background: #ddd;
+	font-family: 'Open Sans', Calibri, sans-serif;
+	font-size: 10pt;
+}
+
+body {
+	min-width: 1080px;
+	width: 100%;
+	height: auto;
+}
+
+.clear { clear : both; }
+
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+a:hover {
+	color: #ec7523;
+}
+
+a.element.button, a.element.button:hover {
+	color: black;
+	font-size: 14px !important;
+}
+
+#bottom a.element.button {
+	border: 1px solid #a9be14;
+	border-radius: 3px;
+	background-color: #fff;
+	padding: 5px 10px;
+	margin: 5px 10px;
+}
+
+#bottom a.element.button:hover {
+	cursor: pointer;
+}
+
+#bottom a.element.button.valider {
+	background-color: #a9be14;
+	color: #fff;
+}
+
+#bottom a.element.button.valider:hover {
+	background-color: #BFD334;
+	color: #fff;
+}
+
+.resize {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 15px;
+	opacity: 0.6;
+}
+
+.resize:hover {
+	cursor: nw-resize;
+}
+
+
+body.cuerto .t41.component .title {
+	font-family: 'Open Sans', Calibri, sans-serif;
+}
+
+
+/* Top - En-t�te (Logo, Menu, Bloc utilisateur) - Sous-menu - Dossier
+======================================================================= 
+======================================================================= */
+ 
+#template-top {
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	transition: all 0.3s linear;
+}
+
+/* Affichage de l'ombre lors du scroll */
+#template-top.header-scroll {
+	border-bottom: 1px solid #888;
+	box-shadow: 1px 1px 12px #555;
+}
+
+
+/* En-t�te
+============ */
+#header {
+	width: 100%;
+	padding: 5px 0;
+	background: #fff;
+}
+
+
+/* Logo */
+#header h1 img {
+	float: left;
+	height: 45px;
+	margin-left: 25px;
+}
+
+
+/* Menu principal */
+body.cuerto #header .t41.component.menu {
+	display: inline;
+	float: left;
+	box-shadow: none;
+	padding: 3px 6px;
+	margin: 3px 6px;
+	font-size: auto;
+	height: auto;
+	border: none;
+	
+}
+
+body.cuerto #header .t41.component.menu > ul {
+	display: inline-block;
+}
+
+body.cuerto #header .t41.component.menu li {
+	display: inline;
+	line-height: 26px;
+	padding: 10px 12px;
+}
+
+body.cuerto #header .t41.component.menu li a {
+	font-family: 'Open Sans', Calibri, sans-serif;
+	font-size: 12pt;
+	font-weight: normal;
+}
+
+body.cuerto #header .t41.component.menu li.active a {
+	color: #ec7523;
+	font-weight: 600;
+}
+
+body.cuerto #header .t41.menu li.head:hover a.head {
+	box-shadow: none;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+/* Menu D�roulant */
+body.cuerto #header .t41.component.menu .drop {
+	background-color: #fafafa;
+	background: linear-gradient(#ffffff, #f2f2f2);
+	box-shadow: 0px 3px 5px #888;
+	border: 3px solid #fff;
+    border-radius: 5px;
+	padding: 5px 15px 10px;
+	position: absolute;
+	left: -999em;
+	background-color: #ffffff;
+	padding: 0;
+	border-top: none;
+	z-index: 800;
+}
+
+body.cuerto #header .t41.menu li.head div.drop li a {
+  text-decoration: none;
+  padding: 3px 4px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #444;
+}
+
+body.cuerto #header .t41.menu li.head div.drop li a[href] {
+  padding: 2px 4px 2px 18px;
+  color: #555;
+  font-weight: normal;
+}
+
+body.cuerto #header .t41.menu li.head div.drop li a[href]:hover {
+	color: #ec7523;
+}
+
+body.cuerto #header .t41.component.menu .drop ul {
+	min-width: 220px;
+}
+
+
+body.cuerto #header .t41.component.menu .drop ul li {
+    background: #fff;
+}
+
+body.cuerto #header .t41.component.menu li.head:hover {
+	background-color: #fafafa;
+	background: linear-gradient( #fff, #f2f2f2);
+	box-shadow: 0px 2px 5px #888;
+	padding: 10px 12px;
+}
+
+body.cuerto #header .t41.component.menu li.head:hover .drop {
+    left: auto;
+    top: auto;
+}
+
+/* Utilisateur */
+.user {
+	float: right;
+	margin-right: 25px;
+	padding: 5px 15px;
+	text-align: center;
+	background: #f8f8f8;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.user p span{
+	color: #ec7523;
+}
+
+.user ul li {
+	display: inline;
+	line-height: 15px;
+	padding: 0 5px;
+}
+
+
+/* Sous-menu
+============== */
+#sous-menu {
+	padding: 6px 6px;
+	background: #a9be14;
+	border-bottom: 1px solid #aaa;
+	font-size: 12pt;
+}
+
+
+#sous-menu li {
+	display: inline;
+}
+
+#sous-menu li a {
+	color: #eee;
+}
+
+#sous-menu li a:hover {
+	color: #ec7523;
+}
+
+#sous-menu li.active a{
+	color: #fff;
+	font-weight: 600;
+}
+
+
+/* Fil d'Ariane */
+#sous-menu .fil {
+	float: left;
+}
+
+#sous-menu .fil li {
+	margin-right: 15px;
+}
+
+#sous-menu .fil li a:after {
+	content: ">";
+	margin-left: 12.5px;
+	color: #eee;
+}
+
+#sous-menu .fil li.active a:after {
+	content: none;
+}
+
+
+/* Autres options du sous-menu */
+#sous-menu .options {
+	float: right;
+}
+
+#sous-menu .options li {
+	margin-left: 15px;
+}
+
+
+/* Dossier
+============ */
+.dossier {
+	padding: 10px 30px;
+	background-color: #f2f2f2;
+	background: linear-gradient( #f0f0f0, #f5f5f5);
+	border-bottom: 1px solid #aaa;
+	font-size: 12pt;
+}
+
+.dossier li{
+	display: inline;
+	margin-right: 25px;
+}
+
+.dossier li span{
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+
+
+/* Contenu de la page (blocs)
+===============================
+=============================== */
+
+#content {
+	position: relative;
+	top: 125px;
+	padding: 0 15px 1200px;
+}
+
+#content.fullpagesearch {
+	top: 60px;
+}
+
+.t41.component {
+	background-color: #fafafa;
+	background: linear-gradient( #fff, #f2f2f2);
+	box-shadow: 0px 3px 5px #888;
+	border: 3px solid #fff;
+    border-radius: 5px;
+	margin-bottom: 30px;
+	padding: 5px 15px 10px;
+	position: relative;
+}
+
+/* Conteneur de taille 1/3 */
+.conteneur-size1 {
+	width: 24%;
+	float: left;
+	margin: 0 0.7%;
+}
+
+/* Conteneur de taille 2/3 */
+.conteneur-size2{
+	width: 72%;
+	float: left;
+	margin: 0 0.7%;
+}
+
+/* Responsables : deux blocs 1/3 dans un bloc 2/3 */
+.conteneur-size2 .t41.component .t41.component{
+/*	width:calc(49% - 38px); */
+	margin: 0 0.7%;
+	float: left;
+	border: 1px solid #ddd;
+	background: white;
+	box-shadow: none;
+}
+
+.conteneur-size2 .t41.component .ajouter {
+	padding-bottom: 0;
+	float: left;
+	border: none;
+	border: 2px dashed #ddd;
+}
+
+.conteneur-size2 .t41.component .ajouter a {
+	display: block;
+	text-align: center;
+	height: 258px;
+	border-radius: 5px;
+}
+
+.conteneur-size2 .t41.component .ajouter a img{
+	width: 100px;
+	margin-top: 80px;
+}
+
+.conteneur-size2 .t41.component .ajouter a:hover {
+	opacity: 0.7;
+}
+
+
+/* Titre des blocs
+==================== */
+.t41.component .title {
+	line-height: 40px;
+	margin-bottom: 15px;
+/*	cursor: move;*/
+	border-bottom: 2px dashed #a9be14;
+}
+
+.t41.component h4.title {
+	display: block;
+	font-size: 16pt;
+	font-weight: 600;
+}
+
+.t41.component a.title {
+	float: right;
+	width: 40px;
+	text-align: center;
+	cursor : pointer;
+}
+
+
+/* Contenu des blocs
+====================== */
+.label {
+	width: 40%;
+	line-height: 25px;
+	float: left;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.block p {
+	line-height: 25px;
+}
+
+.journal p {
+	float: left;
+}
+
+.journal p, .label {
+	width: auto;
+	margin-right: 25px;
+}
+
+.documents .label {
+	width: 75%;
+}
+
+.documents .label img {
+	vertical-align: -2px;
+	margin-right: 5px;
+}
+
+/* Boutons des blocs
+====================== */
+.buttons {
+	margin-top: 15px;
+	text-align: right;
+}
+
+.buttons a {
+	line-height: 24px;
+	display: inline;
+	padding: 5px 10px;
+}
+
+
+/* FOOTER - Boutons d'action
+==============================
+============================== */
+#bottom {
+	background-color: #fff;
+	background: linear-gradient( #f0f0f0, #f5f5f5);
+	line-height: 50px;
+	border-top: 2px solid #888;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+}
+
+#bottom p.left a img {
+	height: 40px;
+}
+
+#bottom p.left * {
+	vertical-align: top;
+}
+
+#bottom ul {
+	display: block;
+	text-align: right;
+	margin-right: 20px;
+}
+
+#bottom ul li{
+	display: inline-block;
+}
+
+
+/* forms */
+fieldset div.field, fieldset div.label {
+	min-height: 30px;
+	padding: 4px;
+	vertical-align: bottom;
+}
+
+fieldset div.field label {
+	min-height: 25px;
+	vertical-align: bottom;
+	margin-right: 8px;
+}
+
+
+
+/**
+ * float positions
+ */
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+#bottom .dev {
+	background-color: #b91e52;
+	color: #fff;
+}
+
+body.cuerto fieldset, body.cuerto fieldset legend {
+	border: none;
+}
+
+body.cuerto .t41.component.alert {
+
+}
+
+body.cuerto .t41.component.alert .title {
+	width: 100%;
+	text-align: left;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+body.cuerto .t41.component.alert .content {
+	font-family: 'Open Sans', Calibri, sans-serif;
+}
+
+body.cuerto .t41.component.alert .title .close {
+	background: url("/assets/images/cuerto/close_12x12.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: none !important;
+}
+
+#help {
+	font-size:16px;
+}

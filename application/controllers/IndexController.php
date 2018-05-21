@@ -1,8 +1,7 @@
 <?php
 
-use t41\Core;
 use t41\View;
-use t41\ObjectModel\Collection;
+use t41\View\SimpleComponent;
 
 class IndexController extends \Zend_Controller_Action {
 
@@ -13,17 +12,9 @@ class IndexController extends \Zend_Controller_Action {
 
 	public function indexAction()
 	{
-		$this->_session = new \Zend_Session_Namespace('user');
-		if ($this->_session->operateur instanceof Operateur) {
-			$this->_redirect('/dashboard');
-		}
-
-		if (true) {
-			$c = new View\TemplateComponent();
-			$c->load('selecteur_role.html');
-			$c->register();
-		} else {
-
+		$bloc = new SimpleComponent();
+		$bloc->setTitle("Bienvenue au workshop !");
+		$bloc->setContent("Ce bloc est positionné dans l'emplacement par défaut");
+		$bloc->register();
 	}
-}
 }

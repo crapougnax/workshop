@@ -2,17 +2,18 @@
 
 use t41\View;
 use t41\Core\Acl;
+use Workshop\Operateur;
 
 class LoginController extends \Zend_Controller_Action {
 
 	public function init()
 	{
-		View::setTemplate('default.html');
+		View::setTemplate('login.html');
 	}
 
 	public function userAction()
 	{
-		$operateur	= new Core\Operateur(2);
+		$operateur = new Operateur(2);
 		$role = Acl::getRole('user');
 		$this->_setSession($role, $operateur);
 		$this->_redirect('/dashboard');
@@ -20,7 +21,7 @@ class LoginController extends \Zend_Controller_Action {
 
 	public function adminAction()
 	{
-		$operateur	= new Core\Operateur(1);
+		$operateur = new Operateur(2);
 		$role = Acl::getRole('admin');
 		$this->_setSession($role, $operateur);
 		$this->_redirect('/dashboard');
@@ -28,7 +29,7 @@ class LoginController extends \Zend_Controller_Action {
 
 	public function guestAction()
 	{
-		$operateur	= new Core\Operateur(1);
+		$operateur = new Operateur(2);
 		$role = Acl::getRole('guest');
 		$this->_setSession($role, $operateur);
 		$this->_redirect('/dashboard');
