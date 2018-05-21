@@ -4,9 +4,7 @@
 		<backend id="mysql0" type="sql">
 			<uri>
 				<adapter>pdo_mysql</adapter>
-				<host>
-					localhost
-				</host>
+				<host>localhost</host>
 				<username>
 					<dev>root</dev>
 				</username>
@@ -15,7 +13,7 @@
 				</password>
 				<port>3306</port>
 				<url>
-					<dev>scotchbox</dev>
+					<dev>workshop</dev>
 				</url>
 			</uri>
 		</backend>

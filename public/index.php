@@ -4,8 +4,7 @@ use t41\View\SimpleComponent;
 use t41\Config;
 use t41\View;
 use t41\Core;
-use t41\ObjectModel;
-use t41\ObjectModel\ObjectUri;
+
 
 /**
  * This is your application bootstrap
@@ -48,11 +47,10 @@ foreach (Config::getPaths(Config::REALM_CONTROLLERS) as $controller) {
 
 $fcontroller->setControllerDirectory($_routes);
 
-
 try {
 	$fcontroller->dispatch();
 } catch (\Exception $e) {
-	var_Dump($e);
+	var_Dump($e); die;
 	displayException($e, "Erreur Système");
 }
 

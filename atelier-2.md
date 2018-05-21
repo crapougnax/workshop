@@ -117,10 +117,28 @@ Dans le cas où il est nécessaire de mapper des objets et des backends qui ne r
 Plus d'informations sont fournies dans le [Wiki t41](https://github.com/crapougnax/t41/wiki/Backends)
 
 
+## Création de la base de données `workshop`
+
+La base de données de l'application n'existe pas encore. Nous allons la créer.
+
+`CREATE DATABASE IF NOT EXISTS `workshop` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci`
+
 ## Création de la table `workshop_livre`
 
 Pour finir cet atelier, nous allons créer la table nécessaire à notre objet `Workshop\Livre` dont le nom est `workshop_livre`.
 
 vous trouverez sa structure SQL ainsi que quelques enregistrements dans le fichier `sql/livre.sql`. Executez-le avec la méthode d'accès au serveur MySQL qui vous convient.
 
- 
+Par exemple, en ligne de commande : `mysql workshop < /var/www/sql/livre.sql`. 
+
+## Affichage d'un objet
+
+Rendez-vous dans le fichier application/controllers/IndexController.php et observez les modifications.
+
+Un objet s'obtient par son identifiant qui est par défaut un entier positif auto-incrémentable non signé (ligne 20)
+
+Essayez d'appeler l'objet 4 et observez le comportement.
+
+Il n'y a pas d'erreur car le point de vue de t41 est l'objet et pas la base de données. Pour vérifier que l'objet existe déjà dans un backend, vous pouvez utiliser la méthode `getIdentifier()` qui retournera zéro si l'objet n'est pas encore persisté.
+
+

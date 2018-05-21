@@ -2,7 +2,7 @@
 	<objects>
 		<object id="Workshop\Livre" extends="t41\Core\BaseObject">
 			<properties>
-				<property id="titre" type="string">
+				<property id="label" type="string">
 					<label>Titre</label>
 					<constraints>
 						<mandatory />
@@ -43,6 +43,7 @@
             </value>
 					</values>
 					<defaultvalue>D</defaultvalue>
+				</property>
 			</properties>
 		</object>
 	</objects>
