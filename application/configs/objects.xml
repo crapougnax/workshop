@@ -1,87 +1,48 @@
 <config>
 	<objects>
-		<object id="Workshop\Operateur" extends="t41\Core\BaseObject">
+		<object id="Workshop\Livre" extends="t41\Core\BaseObject">
 			<properties>
-				<property id="nom" type="string">
-					<label>Nom</label>
+				<property id="titre" type="string">
+					<label>Titre</label>
 					<constraints>
 						<mandatory />
 					</constraints>
 				</property>
-				<property id="prenom" type="string">
-					<label>Prénom</label>
+				<property id="auteur" type="string">
+					<label>Auteur</label>
 					<constraints>
 						<mandatory />
 					</constraints>
 				</property>
-				<property id="email" type="string">
-					<label>Adresse email</label>
+				<property id="description" type="string">
+					<label>Description</label>
+					<multilines>true</multilines>
 				</property>
-				<property id="telephone" type="string">
-					<label>Téléphone</label>
+				<property id="annee" type="string">
+					<label>Année</label>
 				</property>
-				<property id="mobile" type="string">
-					<label>Mobile</label>
-				</property>
-				<property id="identifiant" type="string">
-					<label>Identifiant</label>
+				<property id="pages" type="integer">
 					<constraints>
-						<protected />
-						<mandatory/>
+						<minlength>4</minlength>
+						<maxlength>4</maxlength>
+						<digits>4</digits>
 					</constraints>
+					<label>Pages</label>
 				</property>
-				<property id="motdepasse" type="string">
-					<label>Mot de passe</label>
-					<constraints>
-						<encrypted/>
-						<format>password</format>
-					</constraints>
-				</property>
-			</properties>
-		</object>
-
-		<object id="Workshop\Operateur\Role" extends="t41\Core\BaseObject">
-			<properties>
-				<property id="operateur" type="object">
-					<label>Opérateur</label>
-					<instanceof>Workshop\Operateur</instanceof>
-					<display>nom,prenom</display>
-					<constraints>
-						<mandatory />
-						<protected/>
-					</constraints>
-				</property>
-				<property id="entite" type="object">
-					<label>Entite</label>
-					<instanceof>Workshop\Entite</instanceof>
-					<display>type,label</display>
-					<sorting>label ASC</sorting>
-					<constraints>
-						<mandatory />
-					</constraints>
-				</property>
-				<property id="role" type="enum">
-					<label>Rôle</label>
-					<constraints>
-						<protected />
-						<mandatory/>
-					</constraints>
-					<values>
-						<value id="admin"><label>Administrateur</label></value>
-						<value id="user"><label>Utilisateur</label></value>
-						<value id="guest"><label>Invité</label></value>
+ 				<property id="statut" type="enum">
+          <label>Statut</label>
+          <values>
+            <value id="A">
+              <label>A paraître</label>
+            </value>
+            <value id="D">
+            	<label>Disponible</label>
+            </value>
+            <value id="E">
+            	<label>Epuisé</label>
+            </value>
 					</values>
-				</property>
-				<property id="debut" type="date">
-					<label>Début</label>
-					<constraints>
-						<protected />
-						<mandatory/>
-					</constraints>
-				</property>
-				<property id="fin" type="date">
-					<label>Fin</label>
-				</property>
+					<defaultvalue>D</defaultvalue>
 			</properties>
 		</object>
 	</objects>

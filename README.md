@@ -48,22 +48,4 @@ Aller à l'adresse `http://workshop.local/`
 
 ## Déroulé
 
-
-### La structure du projet
-
-#### Configuration générale
-
-#### Dossier public
-
-#### Modules
-
-#### Menu
-
-### Les fichiers de configuration
-
-### Créer un modèle
-
-### Créer un formulaire
-
-### Créer une liste
-
+Rendez-vous dans le descriptif de l'[Atelier 1](atelier-1.md)
