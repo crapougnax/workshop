@@ -9,19 +9,13 @@
 				</host>
 				<username>
 					<dev>root</dev>
-					<stage></stage>
-					<prod></prod>
 				</username>
 				<password>
 					<dev>root</dev>
-					<stage></stage>
-					<prod></prod>
 				</password>
 				<port>3306</port>
 				<url>
 					<dev>scotchbox</dev>
-					<stage></stage>
-					<prod></prod>
 				</url>
 			</uri>
 		</backend>
