@@ -56,3 +56,7 @@ Votre machine et la VM partage le dossier. Toute modification locale sera access
 ## Déroulé
 
 Rendez-vous dans le descriptif de l'[Atelier 1](atelier-1.md)
+
+## Références
+
+Vous trouverez des infos générales sur t41 dans son [Wiki](https://github.com/crapougnax/t41/wiki).

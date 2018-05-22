@@ -86,7 +86,7 @@ Les objets dont la définition ne comporte pas d'argument `backend=` utiliserons
 
 Le mappage par défaut est très simple :
 
-* à l'objet `Workspace\Livre` correspond une table `workshop_livre`,
+* à l'objet `Workshop\Livre` correspond une table `workshop_livre`,
 * à la propriété label correspond un champ `label`, etc.
 
 
