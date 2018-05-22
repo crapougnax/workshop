@@ -1,10 +1,8 @@
 <?php
 
-use t41\View\SimpleComponent;
+use t41\Core;
 use t41\Config;
 use t41\View;
-use t41\Core;
-
 
 /**
  * This is your application bootstrap
@@ -50,7 +48,6 @@ $fcontroller->setControllerDirectory($_routes);
 try {
 	$fcontroller->dispatch();
 } catch (\Exception $e) {
-	var_Dump($e); die;
 	displayException($e, "Erreur Système");
 }
 
@@ -68,7 +65,7 @@ function displayException($e, $title = '')
 		$title .= ' : ';
 	}
 	View::resetObjects(View::PH_DEFAULT);
-	$erreur = new SimpleComponent();
+	$erreur = new View\SimpleComponent();
 	$erreur->setTitle($title . $e->getMessage())->register();
 
 	if (Core::$env != Core::ENV_PROD) {
