@@ -18,6 +18,10 @@ Attention, les droits d'administrateur peuvent être requis pour l'installation 
 ### Cloner le dépôt de code du workshop
 `git clone https://github.com/Quatrain/workshop.git && cd workshop`
 
+puis se positionner sur l'atelier 1
+
+`git checkout atelier-1`
+
 
 ### Provisionner la machine virtuelle
 
@@ -45,6 +49,9 @@ Le dossier courant sera partagé avec la machine virtuelle et servira de base au
 
 Aller à l'adresse `http://workshop.local/`
 
+### ajoutez le dossier de l'application à votre IDE
+
+Votre machine et la VM partage le dossier. Toute modification locale sera accessible sur le serveur immédiatement.
 
 ## Déroulé
 
