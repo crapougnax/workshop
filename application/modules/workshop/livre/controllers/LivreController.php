@@ -6,15 +6,26 @@ use t41\View\SimpleComponent;
 use t41\View\ListComponent;
 use t41\View\FormComponent\Element\ButtonElement;
 use t41\ObjectModel\Collection;
+use t41\Core;
 use Workshop\Livre;
 
-class LivreController extends \Zend_Controller_Action {
+class Livres_LivreController extends \Zend_Controller_Action {
 
 	public function init()
 	{
     View::setTemplate('default.html');
     View::addCoreLib(['core.js','object.js','locale.js']);
     View::addEvent("t41.locale.lang='fr'", 'js');
+
+    $defaultMenu = Core\Layout::getMenu('main');
+
+    $menu = new View\MenuComponent();
+    $menu->setMenu($defaultMenu);
+
+  //  $menu->setRole(new Core\Acl\Role('admin'));
+
+    $menu->getMenu();
+    $menu->register('menu');
   }
 
   public function indexAction()
@@ -30,7 +41,7 @@ class LivreController extends \Zend_Controller_Action {
 
       $bloc = new SimpleComponent();
       $bloc->setTitle("Actions");
-      $bloc->setContent(ButtonElement::factory("Ajouter un livre", "/livre/ajouter"));
+      $bloc->setContent(ButtonElement::factory("Ajouter un livre", "/livres/livre/ajouter"));
       $bloc->register('left');
 
       $collection = new Collection('Workshop\Livre');

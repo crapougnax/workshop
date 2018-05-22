@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <modules>
+    <module id="livre" vendor="workshop">
+      <version>0.1.0</version>
+      <enabled>true</enabled>
+      <label>Bibliothèque</label>
+      <description>Module permettant la gestion des livres</description>
+      <copyright>2018 Quatrain Développement SAS</copyright>
+      <namespace>Workshop</namespace>
+      <controller>
+        <base>livres</base>
+        <label>Bibliothèque</label>
+        <help></help>
+        <items>
+          <item id="administration">
+            <label>Administration</label>
+            <nolink/>
+            <help></help>
+            <acl>
+              <svs_admin/>
+              <root/>
+            </acl>
+            <items>
+              <item id="livre/index">
+                <label>Consulter le catalogue</label>
+                <acl>
+                  <admin/>
+                </acl>
+              </item>
+              <item id="livre/ajouter">
+                <label>Ajouter un livre</label>
+                <acl>
+                  <root/>
+                </acl>
+              </item>
+            </items>
+          </item>
+      </items>
+      </controller>
+    </module>
+  </modules>
+</config>

@@ -1,50 +1,5 @@
 <config>
 	<objects>
-		<object id="Workshop\Livre" extends="t41\Core\BaseObject">
-			<properties>
-				<property id="label" type="string">
-					<label>Titre</label>
-					<constraints>
-						<mandatory />
-					</constraints>
-				</property>
-				<property id="auteur" type="string">
-					<label>Auteur</label>
-					<constraints>
-						<mandatory />
-					</constraints>
-				</property>
-				<property id="description" type="string">
-					<label>Description</label>
-					<multilines>true</multilines>
-				</property>
-				<property id="annee" type="string">
-					<label>Année</label>
-				</property>
-				<property id="pages" type="integer">
-					<constraints>
-						<minlength>4</minlength>
-						<maxlength>4</maxlength>
-						<digits>4</digits>
-					</constraints>
-					<label>Pages</label>
-				</property>
- 				<property id="statut" type="enum">
-          <label>Statut</label>
-          <values>
-            <value id="A">
-              <label>A paraître</label>
-            </value>
-            <value id="D">
-            	<label>Disponible</label>
-            </value>
-            <value id="E">
-            	<label>Epuisé</label>
-            </value>
-					</values>
-					<defaultvalue>D</defaultvalue>
-				</property>
-			</properties>
-		</object>
+	<empty/>
 	</objects>
 </config>
