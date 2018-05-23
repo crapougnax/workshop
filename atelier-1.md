@@ -15,6 +15,9 @@ application/
 	library/
 	modules/
 	views/
+cli/
+public/
+views/
 ```
 
 ## Configuration générale

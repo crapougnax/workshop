@@ -1,0 +1,14 @@
+<config>
+	<objects>
+		<object id="Workshop\Auteur" extends="t41\Core\BaseObject">
+			<properties>
+				<property id="label" type="string">
+					<label>Nom</label>
+					<constraints>
+						<mandatory />
+					</constraints>
+				</property>
+			</properties>
+		</object>
+	</objects>
+</config>

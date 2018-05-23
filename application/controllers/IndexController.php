@@ -13,6 +13,6 @@ class IndexController extends \Zend_Controller_Action {
 
 	public function indexAction()
 	{
-			$this->redirect('/livre/index');
+			$this->redirect('/livres/livre/index');
 	}
 }

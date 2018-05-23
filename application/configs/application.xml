@@ -23,7 +23,7 @@
 					<log>true</log>
 					<cli>true</cli>
 					<cache_backend>File</cache_backend>
-					<cache_configs>true</cache_configs>
+					<cache_configs>false</cache_configs>
 					<cache_objects>true</cache_objects>
 					<cache_datasets>true</cache_datasets>
 					<cache_assets></cache_assets>

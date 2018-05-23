@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <modules>
+    <module id="auteur" vendor="workshop">
+      <version>0.1.0</version>
+      <enabled>true</enabled>
+      <label>Auteurs</label>
+      <description>Module permettant la gestion des auteurs</description>
+      <copyright>2018 Quatrain Développement SAS</copyright>
+      <namespace>Workshop</namespace>
+      <controller>
+        <base>auteurs</base>
+        <label>Auteurs</label>
+        <help></help>
+        <items>
+          <item id="administration">
+            <label>Administration</label>
+            <nolink/>
+            <help></help>
+            <acl>
+              <svs_admin/>
+              <root/>
+            </acl>
+            <items>
+              <item id="auteur/index">
+                <label>Consulter les auteurs</label>
+                <acl>
+                  <admin/>
+                </acl>
+              </item>
+              <item id="auteur/ajouter">
+                <label>Ajouter un auteur</label>
+                <acl>
+                  <root/>
+                </acl>
+              </item>
+            </items>
+          </item>
+      </items>
+      </controller>
+    </module>
+  </modules>
+</config>

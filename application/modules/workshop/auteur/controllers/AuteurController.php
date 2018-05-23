@@ -7,9 +7,9 @@ use t41\View\ListComponent;
 use t41\View\FormComponent\Element\ButtonElement;
 use t41\ObjectModel\Collection;
 use t41\Core;
-use Workshop\Livre;
+use Workshop\Auteur;
 
-class Livres_LivreController extends \Zend_Controller_Action {
+class Auteurs_AuteurController extends \Zend_Controller_Action {
 
 	public function init()
 	{
@@ -29,55 +29,55 @@ class Livres_LivreController extends \Zend_Controller_Action {
 
   public function indexAction()
   {
-      $livre = new Livre();
+      $auteur = new Auteur();
 
-      $form = new FormComponent($livre, [
+      $form = new FormComponent($auteur, [
         'display' => ['label','statut']
       ]);
 
-      $form->setTitle("Rechercher un livre");
+      $form->setTitle("Rechercher un auteur");
       $form->setDecorator('search')->register('left');
 
       $bloc = new SimpleComponent();
       $bloc->setTitle("Actions");
-      $bloc->setContent(ButtonElement::factory("Ajouter un livre", "/livres/livre/ajouter"));
+      $bloc->setContent(ButtonElement::factory("Ajouter un auteur", "/auteurs/auteur/ajouter"));
       $bloc->register('left');
 
-      $collection = new Collection('Workshop\Livre');
+      $collection = new Collection('Workshop\Auteur');
 
       $list = new ListComponent($collection, [
-        'columns' => ['identifier','label','auteur','annee','pages'],
+        'columns' => ['identifier','label'],
       ]);
 
       $list->addRowAction(
-        '/livre/modifier',
+        '/auteurs/auteur/modifier',
         'Modifier',
         ['icon' => 'tool-blue']
       );
       $list->addRemoveAction(['icon' => 'delete']);
-      $list->setTitle("Mes livres")->register();
+      $list->setTitle("Mes auteurs")->register();
 
   }
 
   public function modifierAction()
   {
-    $livre = new Livre($this->_getParam('id'));
+    $auteur = new Auteur($this->_getParam('id'));
 
-    if (! $livre->getIdentifier()) {
-      throw new Exception("Livre inconnu");
+    if (! $auteur->getIdentifier()) {
+      throw new Exception("Auteur inconnu");
     }
 
-    $form = new FormComponent($livre);
-    $form->setTitle("Modifier un livre");
+    $form = new FormComponent($auteur);
+    $form->setTitle("Modifier un auteur");
     $form->register();
   }
 
   public function ajouterAction()
   {
-    $livre = new Livre();
+    $auteur = new Auteur();
 
-    $form = new FormComponent($livre);
-    $form->setTitle("Ajouter un livre");
+    $form = new FormComponent($auteur);
+    $form->setTitle("Ajouter un auteur");
     $form->register();
   }
 }
